@@ -1,0 +1,147 @@
+body {
+font-family: "Inter", sans-serif;
+font-weight: 400;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #ffffff;
+}
+
+.container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.input-container {
+position: relative;
+width: 300px;
+margin-bottom: 20px;
+}
+
+input {
+font-family: "Inter", sans-serif;
+font-weight: 400;
+width: 100%;
+padding: 16px 12px 8px;
+font-size: 18px;
+border: 2px solid #ccc;
+border-radius: 8px;
+box-sizing: border-box;
+outline: none;
+transition: border 0.3s, box-shadow 0.3s;
+background: white;
+}
+
+input:focus {
+border-color: #4caf50;
+box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+input.invalid {
+border-color: red;
+box-shadow: 0 0 8px rgba(255, 0, 0, 0.3);
+}
+
+label.placeholder {
+font-family: "Inter", sans-serif;
+font-weight: 400;
+position: absolute;
+top: 50%;
+left: 12px;
+transform: translateY(-50%);
+transition: 0.3s ease-in-out;
+font-size: 18px;
+color: #888;
+pointer-events: none;
+background: white;
+padding: 0 5px;
+}
+
+input:focus + .placeholder,
+input:not(:placeholder-shown) + .placeholder {
+font-family: "Inter", sans-serif;
+font-weight: 400;
+top: 6px;
+left: 10px;
+font-size: 14px;
+color: #4caf50;
+}
+
+input::placeholder {
+font-family: "Inter", sans-serif;
+font-weight: 400;
+color: transparent;
+}
+
+.buttons-container {
+font-family: "Inter", sans-serif;
+font-weight: 400;
+display: flex;
+gap: 10px;
+justify-content: space-between;
+width: 100%;
+max-width: 300px;
+}
+
+button {
+padding: 12px 24px;
+font-family: "Inter", sans-serif;
+font-weight: 400;
+font-size: 16px;
+border: none;
+border-radius: 8px;
+background: #4caf50;
+color: white;
+cursor: pointer;
+transition: background 0.3s;
+width: 48%;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+}
+
+button svg {
+width: 18px;
+height: 18px;
+fill: none;
+}
+
+button:hover {
+background: #45a049;
+}
+
+#saveToDb {
+background-color: #2196f3;
+}
+
+#saveToDb:hover {
+background-color: #1976d2;
+}
+
+#saveToDb:disabled {
+background-color: #d3d3d3;
+cursor: not-allowed;
+}
+
+#saveToDb:disabled:hover {
+background-color: #d3d3d3;
+}
+
+.saved-date {
+font-family: "Inter", sans-serif;
+font-weight: 400;
+margin-top: 20px;
+font-size: 16px;
+color: #555;
+padding: 12px 24px;
+width: 300px;
+border-radius: 8px;
+
+text-align: center;
+
+box-sizing: border-box;
+transition: background 0.3s, border 0.3s;
+}  
